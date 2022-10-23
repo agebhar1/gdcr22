@@ -1,0 +1,16 @@
+{
+  "name": "gdcr22",
+  "description": "Slides for Global Day of Code Retreat 2022",
+  "authors": "Andreas Gebhardt",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "scripts": {
+    "serve": "node ."
+  },
+  "dependencies": {
+    "finalhandler": "1.2.0",
+    "katex": "0.16.3",
+    "reveal.js": "4.4.0",
+    "serve-static": "1.15.0"
+  }
+}

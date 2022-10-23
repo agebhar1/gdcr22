@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>GDCR - 2022</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme" />
+
+    <style>
+      .schedule.slot {
+        width: 8em;
+        display: inline-block;
+      }
+
+      .reveal section img {
+        margin: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      .reveal h1 {
+        text-transform: unset;
+      }
+
+      .reveal h2 {
+        text-transform: unset;
+      }
+
+      .reveal h3 {
+        text-transform: unset;
+      }
+
+      .reveal small * {
+        vertical-align: baseline;
+      }
+
+      .katex-display > .katex,
+      .katex-display > .katex > .katex-html,
+      .katex-display {
+        display: inline !important;
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Global Day of Code Retreat</h1>
+          <h2>2022</h2>
+          <br />
+          <p style="font-size: small">
+            facilitated by <img src="assets/twitter-logo.svg" width="10rem" />145ferdi (<img src="assets/GitHub-Mark-Light-64px.png" width="10rem" /> ferdi145) & <img src="assets/twitter-logo.svg" width="10rem" />,&nbsp;<img src="assets/GitHub-Mark-Light-64px.png" width="10rem" /> agebhar1<br />
+            hosted by codecentric AG Leipzig, Germany
+          </p>
+        </section>
+
+        <section>
+          <h2>Schedule of the day</h2>
+          <ul>
+            <li>Welcome/Introduction</li>
+            <li>Session 1-3</li>
+            <li>Lunch & Socializing</li>
+            <li>Session 4-6</li>
+            <li>Closing Circle</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>Introduction</section>
+          <section>
+            <h2>Test Driven Development</h2>
+            <p>
+              <br />
+              <img src="assets/tdd-simple.svg" width="50%" />
+              <br />
+              <span style="font-size: x-small">CC BY-SA <a href="http://www.growing-object-oriented-software.com">http://www.growing-object-oriented-software.com</a> </span>
+            </p>
+          </section>
+          <section>
+            <h2>4 Rules of Simple Design</h2>
+            <p>originally by Kent Beck in late 90's</p>
+            <ul>
+              <li>Passes all Tests</li>
+              <li>Express Intent (Clear, Expressive & Consistent)</li>
+              <li>No duplication (DRY)</li>
+              <li>Minimal methods, classes & modules (no superfluous abstraction)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Conway's Game of Life</h2>
+            <ul>
+              <li>devised by John Horton Conway, 1970</li>
+              <li>a 2D cellular automaton</li>
+              <li>regular grid of cells (potential infinite)</li>
+              <li>cell's state \[ \in \{ dead, alive \} \]</li>
+              <li>neighborhood (set of cells)</li>
+              <li><b>new</b> generation by applying set of rules</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Rules</h3>
+            <div style="font-size: small;">Generation \[ x \to \] Generation \[ x+1 \]</div>
+            <div style="display: grid; grid-template-columns: auto auto; gap: 1em 0em; justify-items: center; margin: 2em">
+              <figure class="fragment">
+                <img src="assets/gol-rule-1.svg" width="300em" />
+                <figcaption style="font-size: small">under population</figcaption>
+              </figure>
+              <figure class="fragment">
+                <img src="assets/gol-rule-2.svg" width="300em" />
+                <figcaption style="font-size: small">survival</figcaption>
+              </figure>
+              <figure class="fragment">
+                <img src="assets/gol-rule-3.svg" width="300em" />
+                <figcaption style="font-size: small">over crowed</figcaption>
+              </figure>
+              <figure class="fragment">
+                <img src="assets/gol-rule-4.svg" width="300em" />
+                <figcaption style="font-size: small">birth</figcaption>
+              </figure>
+            </div>
+          </section>
+        </section>
+        <section>
+          <p>Let's have fun today!</p>
+        </section>
+      </div>
+    </div>
+
+    <script type="module">
+      import Reveal from "./node_modules/reveal.js/dist/reveal.esm.js";
+      import RevealMath from "./node_modules/reveal.js/plugin/math/math.esm.js";
+
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: "slide", // none/fade/slide/convex/concave/zoom
+        katex: {
+          local: "node_modules/katex",
+        },
+        plugins: [RevealMath.KaTeX],
+      });
+    </script>
+  </body>
+</html>
